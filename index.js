@@ -1,6 +1,10 @@
+// โหลดค่าตัวแปรสิ่งแวดล้อมจากไฟล์ .env
 require('dotenv').config();
+// เรียกใช้งาน Express framework
 const express = require('express');
+// สร้างแอป Express ใหม่
 const app = express();
+// กำหนดพอร์ตจาก .env หรือใช้ 3000 ถ้าไม่มี
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) =>{
