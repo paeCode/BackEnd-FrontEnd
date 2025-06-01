@@ -9,9 +9,8 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json()); // เปิดรับ JSON body
 
-// นำ route จากไฟล์ CRUDBokkNoDB.js มาใช้
-require('./CRUDBokkNoDB')(app);
-
+// เรียกใช้ route จากไฟล์ booksRoute.js
+require('./booksRoute')(app);
 
 
 app.get('/', (req, res) =>{
